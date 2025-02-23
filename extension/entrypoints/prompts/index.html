@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompts</title>
+  </head>
+  <body>
+    <h1>Your prompts</h1>
+
+    <div class="d-inline-block">
+      <form class="d-flex flex-column gap-2">
+        <input class="form-control" type="text" placeholder="prompt name" />
+        <textarea class="form-control" placeholder="prompt text"></textarea>
+
+        <button type="button" id="new-prompt-btn" class="btn btn-primary">
+          New prompt
+        </button>
+      </form>
+    </div>
+
+    <div class="container">
+      <div class="row g-2" id="prompts"></div>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
