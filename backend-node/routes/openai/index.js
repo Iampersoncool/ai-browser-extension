@@ -9,7 +9,7 @@ openAiRouter.get('/revisions', async (req, res) => {
   res.json(revisions);
 });
 
-openAiRouter.post('/revise', async (req, res) => {
+openAiRouter.post('/revisions/revise', async (req, res) => {
   try {
     const { originalText, promptText, parentId } = req.body;
 
@@ -26,7 +26,7 @@ openAiRouter.post('/revise', async (req, res) => {
   }
 });
 
-openAiRouter.post('/delete', async (req, res) => {
+openAiRouter.post('/revisions/delete', async (req, res) => {
   try {
     const { id } = req.body;
 

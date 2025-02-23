@@ -9,7 +9,7 @@ deepseekRouter.get('/revisions', async (req, res) => {
   res.json(revisions);
 });
 
-deepseekRouter.post('/revise', async (req, res) => {
+deepseekRouter.post('/revisions/revise', async (req, res) => {
   try {
     const { originalText, promptText, parentId } = req.body;
 
@@ -28,7 +28,7 @@ deepseekRouter.post('/revise', async (req, res) => {
   }
 });
 
-deepseekRouter.post('/delete', async (req, res) => {
+deepseekRouter.post('/revisions/delete', async (req, res) => {
   try {
     const { id } = req.body;
 
