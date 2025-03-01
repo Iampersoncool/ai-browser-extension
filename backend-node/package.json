@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.5.0",
+  "packageManager": "pnpm@10.5.2",
   "devDependencies": {
     "@tsconfig/node-lts": "^22.0.1",
     "@types/node": "^22.13.5",
