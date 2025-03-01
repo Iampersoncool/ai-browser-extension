@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Revision {
+  id Int @id @default(autoincrement())
+
+  originalText String
+  responseText String
+  model        String @db.VarChar(50)
+
+  parentId  Int?
+  parent    Revision?  @relation("RevisionParent", fields: [parentId], references: [id])
+  revisions Revision[] @relation("RevisionParent")
+}
